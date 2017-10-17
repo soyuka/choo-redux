@@ -7,6 +7,12 @@ Redux bridge for choojs.
 2. Choojs already has a state system similar to redux (see `choo.use` and the `emitter`)
 3. I made this because I want to benefit from the `redux` ecosystem with `choo` but in most cases this **is not needed**!
 
+## Install
+
+```
+npm install choo-redux -S
+```
+
 ## Usage
 
 ```javascript
