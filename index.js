@@ -59,7 +59,13 @@ function chooMiddleware (app) {
         app.emitter.emit(action.type, action.payload)
       }
 
-      return next(action)
+      if (!action.render) {
+        return next(action)
+      }
+
+      const result = next(action)
+      app.emitter.emit(RENDER)
+      return result
     }
   }
 }

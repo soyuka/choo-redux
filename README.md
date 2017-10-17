@@ -61,6 +61,16 @@ const {render} = require('choo-redux')
 dispatch(render())
 ```
 
+If you want to render as side-effect on an action, use `{render: true}` in the action:
+
+```
+function customAction(payload = {}) {
+  return {type: CUSTOM_ACTION, render: true, payload}
+}
+
+dispatch(customAction)
+```
+
 ### patchRouter
 
 The patchRouter allows to use redux state and the `dispatch` method inside views.
